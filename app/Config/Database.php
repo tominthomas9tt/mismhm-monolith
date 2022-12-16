@@ -23,7 +23,7 @@ class Database extends Config
      *
      * @var string
      */
-    public $defaultGroup = 'default';
+    public $defaultGroup = 'development';
 
     /**
      * The default database connection.
@@ -66,6 +66,28 @@ class Database extends Config
         'DBPrefix'    => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
         'pConnect'    => false,
         'DBDebug'     => (ENVIRONMENT !== 'production'),
+        'charset'     => 'utf8',
+        'DBCollat'    => 'utf8_general_ci',
+        'swapPre'     => '',
+        'encrypt'     => false,
+        'compress'    => false,
+        'strictOn'    => false,
+        'failover'    => [],
+        'port'        => 3306,
+        'foreignKeys' => true,
+    ];
+
+    public $development = [
+        'DSN'         => '',
+        'hostname'    => 'localhost',
+        'username'    => 'root',
+        'password'    => '',
+        'database'    => 'mis_mhm',
+        'DBDriver'    => 'MySQLi',
+        'DBPrefix'    => '',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
+        'pConnect'    => false,
+        // 'DBDebug'     => (ENVIRONMENT !== 'production'),
+        'DBDebug'     => true,
         'charset'     => 'utf8',
         'DBCollat'    => 'utf8_general_ci',
         'swapPre'     => '',

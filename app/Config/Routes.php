@@ -35,12 +35,14 @@ $routes->set404Override();
  */
 $routes->group('console', function ($routes) {
     $routes->add('dashboard', 'HotlierController::dashboard');
+    $routes->add('properties', 'HotlierController::properties');
     $routes->add('', 'HotlierController::dashboard');
 });
 
 $routes->group('auth', function ($routes) {
     $routes->add('signout', 'AuthController::signout');
-    $routes->add('siginin', 'AuthController::siginin');
+    $routes->add('signin', 'AuthController::signin');
+    $routes->add('signup', 'AuthController::signup');
     $routes->add('', 'AuthController::index');
 });
 // We get a performance increase by specifying the default

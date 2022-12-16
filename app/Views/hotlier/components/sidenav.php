@@ -27,7 +27,7 @@
         <li class="menu-item active">
             <a href="index.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-smart-home"></i>
-                <div data-i18n="Page 1">Page 1</div>
+                <div data-i18n="Page 1">Dashboard</div>
             </a>
         </li>
         <li class="menu-item">

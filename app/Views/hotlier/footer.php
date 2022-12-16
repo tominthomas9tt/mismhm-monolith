@@ -46,11 +46,13 @@
  <!-- endbuild -->
 
  <!-- Vendors JS -->
+ <script src="<?php echo $configData["assetsUrl"]; ?>vendor/libs/sweetalert2/sweetalert2.js"></script>
 
  <!-- Main JS -->
  <script src="<?php echo $configData["assetsUrl"]; ?>js/main.js"></script>
 
  <!-- Page JS -->
+ <script src="<?php echo $configData["assetsUrl"]; ?>js/extended-ui-sweetalert2.js"></script>
  </body>
 
  </html>

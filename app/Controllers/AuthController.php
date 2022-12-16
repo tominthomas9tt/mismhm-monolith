@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\AuthModel;
 
 class AuthController extends BaseController
 {
@@ -12,12 +13,10 @@ class AuthController extends BaseController
     function __construct()
     {
         $this->configData = array(
-            "baseUrl"=>base_url(),
-            "assetsUrl"=>base_url()."/public/assets/"
+            "baseUrl" => base_url(),
+            "assetsUrl" => base_url() . "/public/assets/"
         );
-
     }
-
 
     public function _remap($method, $param1 = null, $param2 = null, $param3 = null)
     {
@@ -31,24 +30,29 @@ class AuthController extends BaseController
     public function signout()
     {
         $this->session->remove("loggedinuser");
-        return redirect()->to('auth/siginin');
+        $this->session->remove("defaultProperty");
+        return redirect()->to('auth/signin');
     }
 
-    public function siginin()
+    public function signin()
     {
         $isError = false;
         $title = "";
         $message = "";
         if ($this->request->getPost()) {
+            $authModel = new AuthModel();
             $username = $this->request->getPost('form_username');
             $password = $this->request->getPost('form_password');
-            if ($username == 'tominthomas9.tt@gmail.com' && $password == 'password') {
+            $loginDetailsArray = $authModel->authUserDetails($username, $password);
+            if ($loginDetailsArray) {
+                $loginDetails = $loginDetailsArray[0];
                 $user = array(
-                    "firstname"=>"Tomin",
-                    "lastname"=>"Thomas",
-                    "username"=>$username,
-                    "role"=>"Hotlier"
+                    "userDetails" => $loginDetails,
                 );
+                $defaultPropertyArray = $authModel->getUserDefaultProperty($loginDetails->id);
+                if ($defaultPropertyArray) {
+                    $this->session->set("defaultProperty", $defaultPropertyArray[0]);
+                }
                 $this->session->set("loggedinuser", $user);
                 return redirect()->to('console/dashboard');
             } else {
@@ -60,7 +64,40 @@ class AuthController extends BaseController
         $data['isError'] = $isError;
         $data['title'] = $title;
         $data['message'] = $message;
-        $this->view('siginin', $data);
+        $this->view('signin', $data);
+    }
+
+    public function signup()
+    {
+        $isError = false;
+        $title = "";
+        $message = "";
+        if ($this->request->getPost()) {
+            $authModel = new AuthModel();
+            $name = $this->request->getPost('form_name');
+            $username = $this->request->getPost('form_username');
+            $password = $this->request->getPost('form_password');
+            $loginDetailsArray = $authModel->checkUserExist($username);
+            if ($loginDetailsArray) {
+                $isError = true;
+                $title = "User already registered";
+                $message = "Please sign in or try resetting password.";
+            } else {
+                $userData = array(
+                    "firstname" => $name,
+                    "username" => $username,
+                    "password" => $password
+                );
+                $newUserCreated = $authModel->createUser($userData);
+                if ($newUserCreated) {
+                    return redirect()->to('auth/signin');
+                }
+            }
+        }
+        $data['isError'] = $isError;
+        $data['title'] = $title;
+        $data['message'] = $message;
+        $this->view('signup', $data);
     }
 
     public function index()
@@ -93,7 +130,7 @@ class AuthController extends BaseController
 
     private function view($view, $data = [])
     {
-        $data['configData']=$this->configData;
+        $data['configData'] = $this->configData;
         echo view($this->authDirectory . $view, $data);
     }
 }

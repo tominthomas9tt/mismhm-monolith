@@ -31,6 +31,7 @@
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="<?php echo $configData["assetsUrl"]; ?>vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="<?php echo $configData["assetsUrl"]; ?>vendor/libs/node-waves/node-waves.css" />
+    <link rel="stylesheet" href="<?php echo $configData["assetsUrl"]; ?>vendor/libs/sweetalert2/sweetalert2.css" />
 
     <!-- Page CSS -->
 
@@ -86,8 +87,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1">
-                                                    <span class="fw-semibold d-block"><?php echo $loggedInUser["firstname"] . " " . $loggedInUser["lastname"]; ?></span>
-                                                    <small class="text-muted"><?php echo $loggedInUser["username"]; ?></small>
+                                                    <span class="fw-semibold d-block"><?php echo $loggedInUser["userDetails"]->firstname . " " . $loggedInUser["userDetails"]->lastname; ?></span>
+                                                    <small class="text-muted"><?php echo $loggedInUser["userDetails"]->username; ?></small>
                                                     <!-- <small class="text-muted">Admin</small> -->
                                                 </div>
                                             </div>

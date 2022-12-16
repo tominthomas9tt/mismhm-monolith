@@ -103,3 +103,417 @@ in APPPATH\Controllers\HotlierController.php on line 47.
  4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotlierController))
  5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 05:59:55 --> Class 'App\Models\AuthModel' not found
+in APPPATH\Controllers\AuthController.php on line 44.
+ 1 APPPATH\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(null, null, null)
+ 2 SYSTEMPATH\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 06:00:15 --> Class 'App\Models\auth\AuthModel' not found
+in APPPATH\Controllers\AuthController.php on line 44.
+ 1 APPPATH\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(null, null, null)
+ 2 SYSTEMPATH\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 06:00:30 --> Argument 1 passed to CodeIgniter\Database\BaseConnection::query() must be of the type string, null given, called in E:\programs\xampp\htdocs\mismhm\app\Models\AuthModel.php on line 28
+in SYSTEMPATH\Database\BaseConnection.php on line 556.
+ 1 APPPATH\Models\AuthModel.php(28): CodeIgniter\Database\BaseConnection->query(null)
+ 2 APPPATH\Controllers\AuthController.php(47): App\Models\AuthModel->getUserWhere('tominthomas9.tt@gmail.com', 'password')
+ 3 APPPATH\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(null, null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 06:02:03 --> Argument 1 passed to CodeIgniter\Database\BaseConnection::query() must be of the type string, null given, called in E:\programs\xampp\htdocs\mismhm\app\Models\AuthModel.php on line 20
+in SYSTEMPATH\Database\BaseConnection.php on line 556.
+ 1 APPPATH\Models\AuthModel.php(20): CodeIgniter\Database\BaseConnection->query(null)
+ 2 APPPATH\Controllers\AuthController.php(47): App\Models\AuthModel->getUserWhere('tominthomas9.tt@gmail.com', 'password')
+ 3 APPPATH\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(null, null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-16 06:02:55 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\programs\xampp\htdocs\mismhm\app\Models\AuthModel.php(20): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(47): App\Models\AuthModel->getUserWhere('tominthomas9.tt...', 'password')
+#5 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(NULL, NULL, NULL)
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\programs\xampp\htdocs\mismhm\app\Models\AuthModel.php(20): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#3 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(47): App\Models\AuthModel->getUserWhere('tominthomas9.tt...', 'password')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(NULL, NULL, NULL)
+#5 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-12-16 06:02:55 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\AuthModel.php(20): CodeIgniter\Database\BaseConnection->query('SELECT * FROM mlogins WHERE mlogins.username = tominthomas9.tt@gmail.com AND mlogins.password = password AND mlogins.status = 2 AND mlogins.astatus = 2')
+ 3 APPPATH\Controllers\AuthController.php(47): App\Models\AuthModel->getUserWhere('tominthomas9.tt@gmail.com', 'password')
+ 4 APPPATH\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-16 06:04:03 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\programs\xampp\htdocs\mismhm\app\Models\AuthModel.php(20): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(47): App\Models\AuthModel->getUserWhere('tominthomas9.tt...', 'password')
+#5 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(NULL, NULL, NULL)
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\programs\xampp\htdocs\mismhm\app\Models\AuthModel.php(20): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#3 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(47): App\Models\AuthModel->getUserWhere('tominthomas9.tt...', 'password')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(NULL, NULL, NULL)
+#5 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-12-16 06:04:03 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\AuthModel.php(20): CodeIgniter\Database\BaseConnection->query('SELECT * FROM mlogins WHERE mlogins.username = tominthomas9.tt@gmail.com AND mlogins.password = password AND mlogins.status = 2 AND mlogins.astatus = 2')
+ 3 APPPATH\Controllers\AuthController.php(47): App\Models\AuthModel->getUserWhere('tominthomas9.tt@gmail.com', 'password')
+ 4 APPPATH\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-16 06:05:58 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'mhm' in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'mhm', 3306, '', 0)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\programs\xampp\htdocs\mismhm\app\Models\AuthModel.php(20): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(47): App\Models\AuthModel->getUserWhere('tominthomas9.tt...', 'password')
+#5 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(NULL, NULL, NULL)
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'mhm' in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\programs\xampp\htdocs\mismhm\app\Models\AuthModel.php(20): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#3 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(47): App\Models\AuthModel->getUserWhere('tominthomas9.tt...', 'password')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(NULL, NULL, NULL)
+#5 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-12-16 06:05:58 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'mhm'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\AuthModel.php(20): CodeIgniter\Database\BaseConnection->query('SELECT * FROM mlogins WHERE mlogins.username = tominthomas9.tt@gmail.com AND mlogins.password = password AND mlogins.status = 2 AND mlogins.astatus = 2')
+ 3 APPPATH\Controllers\AuthController.php(47): App\Models\AuthModel->getUserWhere('tominthomas9.tt@gmail.com', 'password')
+ 4 APPPATH\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-16 06:06:26 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com AND mlogins.password = password AND mlogins.status = 2 AND mlogins...' at line 1 in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM m...', 0)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM m...')
+#2 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM m...')
+#3 E:\programs\xampp\htdocs\mismhm\app\Models\AuthModel.php(20): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(47): App\Models\AuthModel->getUserWhere('tominthomas9.tt...', 'password')
+#5 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(NULL, NULL, NULL)
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-16 06:06:26 --> Call to a member function getResult() on bool
+in APPPATH\Models\AuthModel.php on line 21.
+ 1 APPPATH\Controllers\AuthController.php(47): App\Models\AuthModel->getUserWhere('tominthomas9.tt@gmail.com', 'password')
+ 2 APPPATH\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(null, null, null)
+ 3 SYSTEMPATH\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-16 06:07:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com AND mlogins.password = password AND mlogins.status = 2 AND mlogins...' at line 1 in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM m...', 0)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM m...')
+#2 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM m...')
+#3 E:\programs\xampp\htdocs\mismhm\app\Models\AuthModel.php(20): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(47): App\Models\AuthModel->getUserWhere('tominthomas9.tt...', 'password')
+#5 E:\programs\xampp\htdocs\mismhm\app\Controllers\AuthController.php(26): App\Controllers\AuthController->siginin(NULL, NULL, NULL)
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\AuthController->_remap('siginin')
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-16 06:42:13 --> Call to a member function get() on null
+in APPPATH\Controllers\HotlierController.php on line 37.
+ 1 APPPATH\Controllers\HotlierController.php(31): App\Controllers\HotlierController->isLoggedIn()
+ 2 APPPATH\Controllers\HotlierController.php(26): App\Controllers\HotlierController->init()
+ 3 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\HotlierController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 06:44:59 --> Call to a member function get() on null
+in APPPATH\Controllers\HotlierController.php on line 38.
+ 1 APPPATH\Controllers\HotlierController.php(32): App\Controllers\HotlierController->isLoggedIn()
+ 2 APPPATH\Controllers\HotlierController.php(26): App\Controllers\HotlierController->init()
+ 3 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\HotlierController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 06:46:20 --> Call to a member function get() on null
+in APPPATH\Controllers\HotlierController.php on line 38.
+ 1 APPPATH\Controllers\HotlierController.php(32): App\Controllers\HotlierController->isLoggedIn()
+ 2 APPPATH\Controllers\HotlierController.php(26): App\Controllers\HotlierController->init()
+ 3 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\HotlierController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 06:49:37 --> Call to a member function get() on null
+in APPPATH\Controllers\HotlierController.php on line 38.
+ 1 APPPATH\Controllers\HotlierController.php(32): App\Controllers\HotlierController->isLoggedIn()
+ 2 APPPATH\Controllers\HotlierController.php(26): App\Controllers\HotlierController->init()
+ 3 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\HotlierController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-16 07:02:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM m...', 0)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM m...')
+#2 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM m...')
+#3 E:\programs\xampp\htdocs\mismhm\app\Models\HotlierModel.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(71): App\Models\HotlierModel->getUserproperties(NULL)
+#5 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(53): App\Controllers\HotlierController->properties(NULL, NULL, NULL)
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\HotlierController->_remap('properties')
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotlierController))
+#8 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-12-16 07:03:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM m...', 0)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM m...')
+#2 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM m...')
+#3 E:\programs\xampp\htdocs\mismhm\app\Models\HotlierModel.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(71): App\Models\HotlierModel->getUserproperties(NULL)
+#5 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(53): App\Controllers\HotlierController->properties(NULL, NULL, NULL)
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\HotlierController->_remap('properties')
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotlierController))
+#8 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-16 07:06:40 --> Cannot access private property App\Controllers\HotlierController::$session
+in APPPATH\Controllers\BaseController.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(890): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-16 07:08:11 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM m...', 0)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM m...')
+#2 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM m...')
+#3 E:\programs\xampp\htdocs\mismhm\app\Models\HotlierModel.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(74): App\Models\HotlierModel->getUserproperties(NULL)
+#5 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(56): App\Controllers\HotlierController->properties(NULL, NULL, NULL)
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\HotlierController->_remap('properties')
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotlierController))
+#8 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-12-16 07:14:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM m...', 0)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM m...')
+#2 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM m...')
+#3 E:\programs\xampp\htdocs\mismhm\app\Models\HotlierModel.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(59): App\Models\HotlierModel->getUserproperties(NULL)
+#5 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(39): App\Controllers\HotlierController->properties(NULL, NULL, NULL)
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\HotlierController->_remap('properties')
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotlierController))
+#8 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-12-16 07:14:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM m...', 0)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM m...')
+#2 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM m...')
+#3 E:\programs\xampp\htdocs\mismhm\app\Models\HotlierModel.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(59): App\Models\HotlierModel->getUserproperties(NULL)
+#5 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(39): App\Controllers\HotlierController->properties(NULL, NULL, NULL)
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\HotlierController->_remap('properties')
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotlierController))
+#8 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-12-16 07:14:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM m...', 0)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM m...')
+#2 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM m...')
+#3 E:\programs\xampp\htdocs\mismhm\app\Models\HotlierModel.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(59): App\Models\HotlierModel->getUserproperties(NULL)
+#5 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(39): App\Controllers\HotlierController->properties(NULL, NULL, NULL)
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\HotlierController->_remap('properties')
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotlierController))
+#8 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-12-16 07:24:28 --> mysqli_sql_exception: Table 'mis_mhm.mpropertyoles' doesn't exist in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM m...', 0)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM m...')
+#2 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM m...')
+#3 E:\programs\xampp\htdocs\mismhm\app\Models\HotlierModel.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(59): App\Models\HotlierModel->getUserproperties('1')
+#5 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(39): App\Controllers\HotlierController->properties(NULL, NULL, NULL)
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\HotlierController->_remap('properties')
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotlierController))
+#8 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-12-16 07:25:29 --> mysqli_sql_exception: Table 'mis_mhm.mpropertyoles' doesn't exist in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM m...', 0)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM m...')
+#2 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM m...')
+#3 E:\programs\xampp\htdocs\mismhm\app\Models\HotlierModel.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(59): App\Models\HotlierModel->getUserproperties('1')
+#5 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(39): App\Controllers\HotlierController->properties(NULL, NULL, NULL)
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\HotlierController->_remap('properties')
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotlierController))
+#8 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-16 07:25:29 --> Table 'mis_mhm.mpropertyoles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM mpropertyusers LEFT JOIN mproperties ON mproperties.id = mpropertyusers.mproperty_id LEFT JOIN mpropertyoles ON mpropertyroles.id = mpropertyusers.mpropertyrole_id WHERE mpropertyroles.status = 2 AND mpropertyroles.astatus = 2 AND mproperties.status = 2 AND mproperties.astatus = 2 AND mpropertyusers.status = 2 AND mpropertyusers.astatus = 2 AND mpropertyusers.muser_id = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM mpropertyusers LEFT JOIN mproperties ON mproperties.id = mpropertyusers.mproperty_id LEFT JOIN mpropertyoles ON mpropertyroles.id = mpropertyusers.mpropertyrole_id WHERE mpropertyroles.status = 2 AND mpropertyroles.astatus = 2 AND mproperties.status = 2 AND mproperties.astatus = 2 AND mpropertyusers.status = 2 AND mpropertyusers.astatus = 2 AND mpropertyusers.muser_id = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM mpropertyusers LEFT JOIN mproperties ON mproperties.id = mpropertyusers.mproperty_id LEFT JOIN mpropertyoles ON mpropertyroles.id = mpropertyusers.mpropertyrole_id WHERE mpropertyroles.status = 2 AND mpropertyroles.astatus = 2 AND mproperties.status = 2 AND mproperties.astatus = 2 AND mpropertyusers.status = 2 AND mpropertyusers.astatus = 2 AND mpropertyusers.muser_id = 1')
+ 4 APPPATH\Models\HotlierModel.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM mpropertyusers LEFT JOIN mproperties ON mproperties.id = mpropertyusers.mproperty_id LEFT JOIN mpropertyoles ON mpropertyroles.id = mpropertyusers.mpropertyrole_id WHERE mpropertyroles.status = 2 AND mpropertyroles.astatus = 2 AND mproperties.status = 2 AND mproperties.astatus = 2 AND mpropertyusers.status = 2 AND mpropertyusers.astatus = 2 AND mpropertyusers.muser_id = 1')
+ 5 APPPATH\Controllers\HotlierController.php(59): App\Models\HotlierModel->getUserproperties('1')
+ 6 APPPATH\Controllers\HotlierController.php(39): App\Controllers\HotlierController->properties(null, null, null)
+ 7 SYSTEMPATH\CodeIgniter.php(926): App\Controllers\HotlierController->_remap('properties')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotlierController))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-16 07:29:27 --> mysqli_sql_exception: Unknown column 'mpropertyusers.id_default' in 'field list' in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT mpropert...', 0)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT mpropert...')
+#2 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT mpropert...')
+#3 E:\programs\xampp\htdocs\mismhm\app\Models\HotlierModel.php(42): CodeIgniter\Database\BaseConnection->query('SELECT mpropert...')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(59): App\Models\HotlierModel->getUserproperties('1')
+#5 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(39): App\Controllers\HotlierController->properties(NULL, NULL, NULL)
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\HotlierController->_remap('properties')
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotlierController))
+#8 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-16 07:29:27 --> Unknown column 'mpropertyusers.id_default' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT mpropertyusers.id, mproperties.name AS propertyName, mpropertyroles.name AS roleName, mpropertyusers.id_default AS isDefault FROM mpropertyusers LEFT JOIN mproperties ON mproperties.id = mpropertyusers.mproperty_id LEFT JOIN mpropertyroles ON mpropertyroles.id = mpropertyusers.mpropertyrole_id WHERE mpropertyroles.status = 2 AND mpropertyroles.astatus = 2 AND mproperties.status = 2 AND mproperties.astatus = 2 AND mpropertyusers.status = 2 AND mpropertyusers.astatus = 2 AND mpropertyusers.muser_id = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT mpropertyusers.id, mproperties.name AS propertyName, mpropertyroles.name AS roleName, mpropertyusers.id_default AS isDefault FROM mpropertyusers LEFT JOIN mproperties ON mproperties.id = mpropertyusers.mproperty_id LEFT JOIN mpropertyroles ON mpropertyroles.id = mpropertyusers.mpropertyrole_id WHERE mpropertyroles.status = 2 AND mpropertyroles.astatus = 2 AND mproperties.status = 2 AND mproperties.astatus = 2 AND mpropertyusers.status = 2 AND mpropertyusers.astatus = 2 AND mpropertyusers.muser_id = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT mpropertyusers.id, mproperties.name AS propertyName, mpropertyroles.name AS roleName, mpropertyusers.id_default AS isDefault FROM mpropertyusers LEFT JOIN mproperties ON mproperties.id = mpropertyusers.mproperty_id LEFT JOIN mpropertyroles ON mpropertyroles.id = mpropertyusers.mpropertyrole_id WHERE mpropertyroles.status = 2 AND mpropertyroles.astatus = 2 AND mproperties.status = 2 AND mproperties.astatus = 2 AND mpropertyusers.status = 2 AND mpropertyusers.astatus = 2 AND mpropertyusers.muser_id = 1')
+ 4 APPPATH\Models\HotlierModel.php(42): CodeIgniter\Database\BaseConnection->query('SELECT mpropertyusers.id, mproperties.name AS propertyName, mpropertyroles.name AS roleName, mpropertyusers.id_default AS isDefault FROM mpropertyusers LEFT JOIN mproperties ON mproperties.id = mpropertyusers.mproperty_id LEFT JOIN mpropertyroles ON mpropertyroles.id = mpropertyusers.mpropertyrole_id WHERE mpropertyroles.status = 2 AND mpropertyroles.astatus = 2 AND mproperties.status = 2 AND mproperties.astatus = 2 AND mpropertyusers.status = 2 AND mpropertyusers.astatus = 2 AND mpropertyusers.muser_id = 1')
+ 5 APPPATH\Controllers\HotlierController.php(59): App\Models\HotlierModel->getUserproperties('1')
+ 6 APPPATH\Controllers\HotlierController.php(39): App\Controllers\HotlierController->properties(null, null, null)
+ 7 SYSTEMPATH\CodeIgniter.php(926): App\Controllers\HotlierController->_remap('properties')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotlierController))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-16 07:29:45 --> mysqli_sql_exception: Unknown column 'mpropertyusers.id_default' in 'field list' in E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\programs\xampp\htdocs\mismhm\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT mpropert...', 0)
+#1 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT mpropert...')
+#2 E:\programs\xampp\htdocs\mismhm\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT mpropert...')
+#3 E:\programs\xampp\htdocs\mismhm\app\Models\HotlierModel.php(42): CodeIgniter\Database\BaseConnection->query('SELECT mpropert...')
+#4 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(59): App\Models\HotlierModel->getUserproperties('1')
+#5 E:\programs\xampp\htdocs\mismhm\app\Controllers\HotlierController.php(39): App\Controllers\HotlierController->properties(NULL, NULL, NULL)
+#6 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(926): App\Controllers\HotlierController->_remap('properties')
+#7 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotlierController))
+#8 E:\programs\xampp\htdocs\mismhm\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\programs\xampp\htdocs\mismhm\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-16 07:29:45 --> Unknown column 'mpropertyusers.id_default' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT mpropertyusers.id, mproperties.name AS propertyName, mpropertyroles.name AS roleName, mpropertyusers.id_default AS isDefault FROM mpropertyusers LEFT JOIN mproperties ON mproperties.id = mpropertyusers.mproperty_id LEFT JOIN mpropertyroles ON mpropertyroles.id = mpropertyusers.mpropertyrole_id WHERE mpropertyroles.status = 2 AND mpropertyroles.astatus = 2 AND mproperties.status = 2 AND mproperties.astatus = 2 AND mpropertyusers.status = 2 AND mpropertyusers.astatus = 2 AND mpropertyusers.muser_id = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT mpropertyusers.id, mproperties.name AS propertyName, mpropertyroles.name AS roleName, mpropertyusers.id_default AS isDefault FROM mpropertyusers LEFT JOIN mproperties ON mproperties.id = mpropertyusers.mproperty_id LEFT JOIN mpropertyroles ON mpropertyroles.id = mpropertyusers.mpropertyrole_id WHERE mpropertyroles.status = 2 AND mpropertyroles.astatus = 2 AND mproperties.status = 2 AND mproperties.astatus = 2 AND mpropertyusers.status = 2 AND mpropertyusers.astatus = 2 AND mpropertyusers.muser_id = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT mpropertyusers.id, mproperties.name AS propertyName, mpropertyroles.name AS roleName, mpropertyusers.id_default AS isDefault FROM mpropertyusers LEFT JOIN mproperties ON mproperties.id = mpropertyusers.mproperty_id LEFT JOIN mpropertyroles ON mpropertyroles.id = mpropertyusers.mpropertyrole_id WHERE mpropertyroles.status = 2 AND mpropertyroles.astatus = 2 AND mproperties.status = 2 AND mproperties.astatus = 2 AND mpropertyusers.status = 2 AND mpropertyusers.astatus = 2 AND mpropertyusers.muser_id = 1')
+ 4 APPPATH\Models\HotlierModel.php(42): CodeIgniter\Database\BaseConnection->query('SELECT mpropertyusers.id, mproperties.name AS propertyName, mpropertyroles.name AS roleName, mpropertyusers.id_default AS isDefault FROM mpropertyusers LEFT JOIN mproperties ON mproperties.id = mpropertyusers.mproperty_id LEFT JOIN mpropertyroles ON mpropertyroles.id = mpropertyusers.mpropertyrole_id WHERE mpropertyroles.status = 2 AND mpropertyroles.astatus = 2 AND mproperties.status = 2 AND mproperties.astatus = 2 AND mpropertyusers.status = 2 AND mpropertyusers.astatus = 2 AND mpropertyusers.muser_id = 1')
+ 5 APPPATH\Controllers\HotlierController.php(59): App\Models\HotlierModel->getUserproperties('1')
+ 6 APPPATH\Controllers\HotlierController.php(39): App\Controllers\HotlierController->properties(null, null, null)
+ 7 SYSTEMPATH\CodeIgniter.php(926): App\Controllers\HotlierController->_remap('properties')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotlierController))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 08:09:03 --> Invalid file: auth/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\AuthController.php(100): view('auth/login', [...])
+ 4 APPPATH\Controllers\AuthController.php(94): App\Controllers\AuthController->view('login', [...])
+ 5 APPPATH\Controllers\AuthController.php(26): App\Controllers\AuthController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(926): App\Controllers\AuthController->_remap('signin')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 08:09:15 --> Invalid file: auth/signin.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/signin.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('auth/signin', [], true)
+ 3 APPPATH\Controllers\AuthController.php(100): view('auth/signin', [...])
+ 4 APPPATH\Controllers\AuthController.php(66): App\Controllers\AuthController->view('signin', [...])
+ 5 APPPATH\Controllers\AuthController.php(24): App\Controllers\AuthController->signin(null, null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(926): App\Controllers\AuthController->_remap('signin')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 08:10:03 --> Invalid file: auth/login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\AuthController.php(100): view('auth/login', [...])
+ 4 APPPATH\Controllers\AuthController.php(94): App\Controllers\AuthController->view('login', [...])
+ 5 APPPATH\Controllers\AuthController.php(26): App\Controllers\AuthController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(926): App\Controllers\AuthController->_remap('signup')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

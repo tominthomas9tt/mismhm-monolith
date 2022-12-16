@@ -74,7 +74,7 @@
             <h4 class="mb-1 pt-2">Welcome to Mis HM! 👋</h4>
             <p class="mb-4">Please sign-in to your account and start managing your property</p>
 
-            <form id="formAuthentication" class="mb-3" action="<?php echo base_url(); ?>/auth/siginin" method="POST">
+            <form id="formAuthentication" class="mb-3" action="<?php echo base_url(); ?>/auth/signin" method="POST">
               <div class="mb-3">
                 <label for="email" class="form-label">Email or Username</label>
                 <input type="text" class="form-control" id="email" name="form_username" placeholder="Enter your email or username" autofocus value="tominthomas9.tt@gmail.com" />
@@ -102,13 +102,13 @@
               </div>
             </form>
 
-            <!-- <p class="text-center">
+            <p class="text-center">
               <span>New on our platform?</span>
-              <a href="auth-register-basic.html">
+              <a href="<?php echo base_url(); ?>/auth/signup">
                 <span>Create an account</span>
               </a>
             </p>
-
+            <!-- 
             <div class="divider my-4">
               <div class="divider-text">or</div>
             </div>
