@@ -24,7 +24,9 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost:8080/';
+    public $baseURL = 'http://localhost/mismhm/';
+    // public $baseURL = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ?  "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
+
 
     /**
      * --------------------------------------------------------------------------
@@ -56,7 +58,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $uriProtocol = 'REQUEST_URI';
+    public $uriProtocol = 'PATH_INFO';
 
     /**
      * --------------------------------------------------------------------------
