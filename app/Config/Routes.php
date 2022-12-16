@@ -16,8 +16,9 @@ if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
  * Router Setup
  * --------------------------------------------------------------------
  */
+
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('Hotlier');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -32,7 +33,16 @@ $routes->set404Override();
  * Route Definitions
  * --------------------------------------------------------------------
  */
+$routes->group('console', function ($routes) {
+    $routes->add('dashboard', 'HotlierController::dashboard');
+    $routes->add('', 'HotlierController::dashboard');
+});
 
+$routes->group('auth', function ($routes) {
+    $routes->add('signout', 'AuthController::signout');
+    $routes->add('siginin', 'AuthController::siginin');
+    $routes->add('', 'AuthController::index');
+});
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
